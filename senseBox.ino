@@ -58,9 +58,10 @@
 /* ------------------------------Configuration------------------------------ */
 /* ------------------------------------------------------------------------- */
 
-// Wifi Credentials
-const char *ssid = "wlan"; // your network SSID (name)
-const char *pass = "iwonttell"; // your network password
+#include "wifi_secrets.h"
+// use sensitive data stored in wifi_secrets.h
+const char ssid[] = SECRET_SSID;  // your network SSID (name)
+const char pass[] = SECRET_PASS;  // your network password
 
 // Number of serial port the SDS011 is connected to. Either Serial1 or Serial2
 #define SDS_UART_PORT (Serial1)
